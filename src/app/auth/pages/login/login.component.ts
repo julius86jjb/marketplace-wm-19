@@ -4,14 +4,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  templateUrl: './login.component.html',
-  styles: `
+    selector: 'app-login',
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
+    templateUrl: './login.component.html',
+    styles: `
     :host {
       display: block;
     }
@@ -22,6 +21,6 @@ import { RouterModule } from '@angular/router';
     }
 
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class LoginComponent { }

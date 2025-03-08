@@ -2,19 +2,18 @@ import { CommonModule, DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, OnDestroy, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-about-us',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  templateUrl: './aboutUs.component.html',
-  styles: `
+    selector: 'app-about-us',
+    imports: [
+        CommonModule,
+    ],
+    templateUrl: './aboutUs.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
 export default class AboutUsComponen implements OnInit, OnDestroy {
 

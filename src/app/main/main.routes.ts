@@ -27,7 +27,7 @@ export const MAIN_ROUTES: Routes = [
   },
   {
     path: 'categories',
-    loadComponent: () => import('./pages/categories/categories.component')
+    loadComponent: () => import('./modules/categories/pages/categories.component')
   },
   {
     path: 'account',
@@ -39,7 +39,7 @@ export const MAIN_ROUTES: Routes = [
   },
   {
     path: 'product/:slug',
-    loadComponent: () => import('./modules/products/productDetails/productDetails.component')
+    loadComponent: () => import('./modules/products/pages/productDetails/productDetails.component')
   },
   {
     path: 'search/:term',
@@ -65,10 +65,6 @@ export const MAIN_ROUTES: Routes = [
     path: '',
     loadComponent: () => import('./pages/home/home.component'),
     pathMatch: 'full'
-  },
-  {
-    path: '**',
-    loadComponent: () => import('./pages/notFound/notFound.component')
-  },
+  }
 
 ];

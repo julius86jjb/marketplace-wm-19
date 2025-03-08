@@ -2,17 +2,16 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-product-details',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  templateUrl: './productDetails.component.html',
-  styles: `
+    selector: 'app-product-details',
+    imports: [
+        CommonModule,
+    ],
+    templateUrl: './productDetails.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class ProductDetailsComponent { }

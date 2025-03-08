@@ -2,12 +2,11 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'hot-deal-day-countdown',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  template: `
+    selector: 'hot-deal-day-countdown',
+    imports: [
+        CommonModule,
+    ],
+    template: `
     <div  class="product-countdown-container flex-wrap">
         <label class="mr-2 text-default">Offer Ends In:</label>
         <div class="product-countdown countdown-compact"
@@ -15,11 +14,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             629 days, 11: 59: 52</div>
     </div>
   `,
-  styles: `
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HotDealDayCountdownComponent { }

@@ -4,14 +4,13 @@ import { RouterModule } from '@angular/router';
 
 
 @Component({
-  selector: 'header-navbar',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  templateUrl: './navbar.component.html',
-  styles: `
+    selector: 'header-navbar',
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
+    templateUrl: './navbar.component.html',
+    styles: `
     :host {
       display: block;
     }
@@ -23,8 +22,8 @@ import { RouterModule } from '@angular/router';
     }
 
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {ngSkipHydration: 'true'},
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { ngSkipHydration: 'true' }
 })
 export class NavbarComponent {
 

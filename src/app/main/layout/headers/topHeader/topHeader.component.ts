@@ -4,18 +4,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'header-top',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  templateUrl: './topHeader.component.html',
-  styles: `
+    selector: 'header-top',
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
+    templateUrl: './topHeader.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TopHeaderComponent { }

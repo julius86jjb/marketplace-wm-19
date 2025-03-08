@@ -7,16 +7,20 @@ export const routes: Routes = [
     loadComponent: () => import('./main/pages/comingSoon/comingSoon.component')
   },
   {
+    path: '404',
+    loadComponent: () => import('./main/pages/notFound/notFound.component')
+  },
+  {
     path: '',
     loadComponent: () => import('./main/layout/layout.component'),
     children: [
       {
         path: 'login',
-        loadComponent: () => import('./main/auth/pages/login/login.component'),
+        loadComponent: () => import('./auth/pages/login/login.component'),
       },
       {
         path: 'register',
-        loadComponent: () => import('./main/auth/pages/register/register.component'),
+        loadComponent: () => import('./auth/pages/register/register.component'),
       },
       {
         path: '',
@@ -27,6 +31,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '', pathMatch: 'full'
+    redirectTo: '404',
   }
 ];

@@ -3,18 +3,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'main-header',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  templateUrl: './mainHeader.component.html',
-  styles: `
+    selector: 'main-header',
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
+    templateUrl: './mainHeader.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainHeaderComponent { }

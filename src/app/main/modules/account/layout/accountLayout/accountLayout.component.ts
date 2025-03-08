@@ -3,19 +3,18 @@ import { ChangeDetectionStrategy, Component, Inject, OnDestroy, OnInit, Renderer
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-account-layout',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  templateUrl: './accountLayout.component.html',
-  styles: `
+    selector: 'app-account-layout',
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
+    templateUrl: './accountLayout.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class AccountLayoutComponent implements OnInit, OnDestroy{
   constructor(

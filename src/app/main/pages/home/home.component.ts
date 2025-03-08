@@ -3,16 +3,13 @@ import { ChangeDetectionStrategy, Component, Inject, OnDestroy, OnInit, Renderer
 import { HotDealDayComponent } from "./components/hotDealDay/hotDealDay.component";
 
 @Component({
-
   selector: 'app-home',
-  standalone: true,
   imports: [
     CommonModule,
-    HotDealDayComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class HomeComponent implements OnInit, OnDestroy {
   constructor(

@@ -5,20 +5,19 @@ import { MainHeaderComponent } from "./mainHeader/mainHeader.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    CommonModule,
-    TopHeaderComponent,
-    MainHeaderComponent,
-    NavbarComponent
-],
-  templateUrl: './header.component.html',
-  styles: `
+    selector: 'app-header',
+    imports: [
+        CommonModule,
+        TopHeaderComponent,
+        MainHeaderComponent,
+        NavbarComponent
+    ],
+    templateUrl: './header.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent { }

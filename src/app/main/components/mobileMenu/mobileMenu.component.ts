@@ -4,18 +4,17 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-mobile-menu',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  templateUrl: './mobileMenu.component.html',
-  styles: `
+    selector: 'app-mobile-menu',
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
+    templateUrl: './mobileMenu.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MobileMenuComponent { }

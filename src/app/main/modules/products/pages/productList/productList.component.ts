@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ProductCardComponent } from '../../components/product-card/product-card.component';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product-list',
-  standalone: true,
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ProductCardComponent
   ],
   templateUrl: './productList.component.html',
   styles: `
@@ -15,6 +17,13 @@ import { RouterModule } from '@angular/router';
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export default class ProductListComponent { }
+export default class ProductListComponent {
+
+  productService = inject(ProductsService);
+
+  productsResource = this.productService.productsResource;
+
+
+}

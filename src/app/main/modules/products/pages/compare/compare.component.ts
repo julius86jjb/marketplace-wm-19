@@ -2,18 +2,17 @@ import { CommonModule, DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-compare',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  templateUrl: './compare.component.html',
-  styles: `
+    selector: 'app-compare',
+    imports: [
+        CommonModule,
+    ],
+    templateUrl: './compare.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class CompareComponent implements OnInit, OnDestroy{
   constructor(

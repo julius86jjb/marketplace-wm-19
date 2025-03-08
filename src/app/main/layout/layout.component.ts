@@ -11,26 +11,24 @@ import { QuickViewComponent } from "../components/quickView/quickView.component"
 import HomeComponent from '../pages/home/home.component';
 
 @Component({
-  selector: 'app-layout',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    RouterModule,
-    HomeComponent,
-    FooterComponent,
-    StickyFooterComponent,
-    ScrollToTopComponent,
-    MobileMenuComponent,
-    NewsletterComponent,
-    QuickViewComponent
-],
-  templateUrl: './layout.component.html',
-  styles: `
+    selector: 'app-layout',
+    imports: [
+        CommonModule,
+        HeaderComponent,
+        RouterModule,
+        FooterComponent,
+        StickyFooterComponent,
+        ScrollToTopComponent,
+        MobileMenuComponent,
+        NewsletterComponent,
+        QuickViewComponent
+    ],
+    templateUrl: './layout.component.html',
+    styles: `
     :host {
       display: block;
     }
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class LayoutComponent { }
